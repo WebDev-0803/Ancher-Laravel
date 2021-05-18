@@ -1,0 +1,628 @@
+body {
+  font-size: 12px;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spin {
+  animation: rotation 2s infinite linear;
+  transform-origin: center center;
+}
+
+i.spinner {
+  height: 19px;
+  width: 19px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.authentication-logo {
+  max-height: 100%;
+  padding: 20px 10px;
+}
+/***** Begin general *****/
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+/***** End general *****/
+
+/***** Begin layout *****/
+.sidebar + .pusher {
+  height: 100%;
+  margin-left: 260px;
+  overflow: auto;
+  transition: margin 0.5s !important;
+  transform: none !important;
+}
+
+.sidebar.thin + .pusher {
+  margin-left: 60px !important;
+}
+/***** End layout *****/
+
+/***** Begin top menu *****/
+.top-menu {
+  border-radius: 0 !important;
+  height: 70px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  margin: 0 !important;
+}
+
+.toggle-sidebar {
+  font-size: 24px;
+  padding-left: 20px !important;
+  padding-right: 10px !important;
+}
+/***** End top menu *****/
+
+/***** Begin sidebar *****/
+.sidebar {
+  transition: transform .5s ease, -webkit-transform .5s ease, width 0.5s !important;
+}
+
+.sidebar.icon {
+  overflow: visible !important;
+}
+
+.sidebar .logo-container {
+  padding: 0 !important;
+  width: 100%;
+}
+
+.sidebar .logo {
+  display: inline-block;
+  max-height: 100%;
+  max-width: 100%;
+  width: auto !important;
+}
+
+.sidebar.expanded #logo-large {
+  padding: 0 10px;
+}
+
+.sidebar.icon #logo-small {
+  padding: 0 10px;
+}
+
+.sidebar.expanded #logo-small {
+  display: none;
+}
+
+.sidebar.icon #logo-large {
+  display: none;
+}
+
+.sidebar .icon-menu {
+  display: none;
+}
+
+.sidebar.icon .icon-menu {
+  display: block;
+}
+
+.sidebar.icon .accordion-menu,
+.sidebar.icon .user-avatar .header {
+  display: none;
+}
+
+.sidebar.icon .user-avatar {
+  transition: all 0.5s ease;
+}
+
+.sidebar.icon .user-avatar {
+  padding-bottom: 1.0rem;
+  padding-top: 1.0rem;
+}
+
+.sidebar .icon-menu > .item {
+  background: rgba(245, 245, 245, 0.0);
+  border-bottom: 1px solid #eee;
+  border-top: 1px solid #eee;
+  color: #000;
+  display: block;
+  font-weight: bold;
+  padding: .92857143em 0em !important;
+  text-align: center;
+  transition: all 0.5s ease;
+}
+
+.sidebar .accordion-menu .title {
+  background: rgba(245, 245, 245, 0.0);
+  border-bottom: 1px solid #eee;
+  border-top: 1px solid #eee;
+  color: #000;
+  display: block;
+  font-weight: bold;
+  padding: .92857143em 1.14285714em !important;
+  transition: all 0.5s ease;
+}
+
+.sidebar .accordion-menu .title:hover,
+.sidebar .accordion-menu .title.active,
+.sidebar .icon-menu > .item:hover {
+  background: rgba(245, 245, 245, 1.0);
+}
+
+.sidebar .accordion > .title > .icon {
+  float: right !important;
+  position: relative;
+  top: 2px;
+}
+
+.sidebar .accordion > .content {
+  padding-top: 0 !important;
+}
+
+.sidebar .accordion > .content .item {
+  background: rgba(245, 245, 245, 0.0);
+  border-bottom: 1px solid #eee;
+  color: #515151;
+  display: block;
+  padding: .5em 0.7em !important;
+  transition: all 0.5s 0.0s ease !important;
+}
+
+.sidebar .accordion > .content .item:hover {
+  background: rgba(250, 250, 250, 1.0);
+  padding: .5em 1.0em !important;
+}
+
+.sidebar .user-avatar {
+  padding: 15%;
+  text-align: center;
+}
+/***** End sidebar *****/
+
+/***** Begin breadcrumb *****/
+.ui.breadcrumb {
+  border-bottom: 1px solid #eee;
+  display: block;
+  margin-bottom: 2.0rem !important;
+  margin-top: 1.0rem !important;
+  padding: 10px 0;
+}
+/***** End breadcrumb *****/
+
+/***** Begin change avatar *****/
+input#avatar-file {
+  border: none;
+  height: 0;
+  overflow: hidden;
+  padding: 0;
+  width: 0;
+}
+
+.ui.positive.button {
+  color: #fff !important;
+}
+/***** End change avatar *****/
+
+/****** Begin category list *****/
+.category-list .edit-mode .category-title,
+.category-list .edit-mode .category-buttons {
+  display: none;
+}
+
+.category-list .field {
+  margin-bottom: 0 !important;
+}
+/****** End category list *****/
+
+/***** Beign images *****/
+#upload_image_input {
+  height: 0px;
+  visibility: hidden;
+  width: 0px;
+}
+
+.uploaded-image .details {
+  display: inline-block;
+  width: calc(100% - 85px);
+}
+
+.uploaded-image .details .title {
+  margin-bottom: 0px !important;
+}
+
+.uploaded-image .progress {
+  display: inline-block;
+  margin-bottom: 0 !important;
+  width: calc(100% - 28px);
+}
+
+.uploaded-image .cancel-upload,
+.uploaded-image .cancel-upload:hover {
+  background: none;
+  padding: 0 !important;
+}
+
+#image-list .ui.card {
+  margin-bottom: 30px;
+}
+/***** End images *****/
+
+.ui.form .inline.fields .wide.field.proper-size {
+  width: 25% !important;
+}
+
+/***** Begin pagination *****/
+.pagination ul {
+  display: block;
+  list-style: none;
+  padding: 0;
+}
+
+.pagination ul li {
+  display: inline-block;
+  margin: 2px;
+  text-align: center;
+}
+
+.pagination ul li:not([class=""]) {
+  background: #f8f8f8;
+  min-width: 36px;
+  transition: all 0.3s ease;
+}
+
+.pagination ul li:not(.active):not([class=""]):not(.disabled):hover {
+  background: #00b5ad;
+}
+
+.pagination ul li.active {
+  background: #00b5ad;
+}
+
+.pagination ul li.active a {
+  color: #fff;
+}
+
+.pagination ul li a {
+  display: block;
+  color: #777;
+  padding: 8px 5px;
+}
+
+.pagination ul li span {
+  display: block;
+  padding: 8px 5px;
+}
+
+.pagination ul li:hover a,
+.pagination ul li.active span {
+  color: #fff;
+}
+
+.pagination ul li.disabled span {
+  color: #ccc;
+}
+/***** End pagination *****/
+
+/***** Begin search anchors *****/
+#form-search-anchors[data-search-status="inprogress"] #field-search-anchors-source .item .right.content {
+  visibility: hidden;
+}
+
+#field-search-anchors-source {
+  max-height: 150px;
+  overflow: auto;
+}
+
+#field-search-anchors-source .item {
+  background: rgba(0, 0, 0, 0);
+  transition: all 0.25s ease-in-out;
+}
+
+#field-search-anchors-source .item:hover {
+  background: #f8f8f8;
+}
+
+#field-search-anchors-source .item a {
+  color: #555;
+}
+
+#field-search-anchors-source .item[data-status="failed"] a,
+#field-search-anchors-source .item[data-status="failed"] .status {
+  color: #db2828;
+}
+
+#field-search-anchors-source .item[data-status="success"] a,
+#field-search-anchors-source .item[data-status="success"] .status {
+  color: #198f35;
+}
+
+#field-search-anchors-source .item .status .icon {
+  display: none;
+}
+
+#field-search-anchors-source .item[data-status="inprogress"] .status .spinner {
+  display: inline-block;
+}
+
+#field-search-anchors-source .item[data-status="failed"] .status .times {
+  display: inline-block;
+}
+
+#field-search-anchors-source .item[data-status="success"] .status .check {
+  display: inline-block;
+}
+
+.row-even {
+  background: #fff;
+}
+
+.row-odd {
+  background: #f8f8f8;
+}
+
+.check-temp-links {
+  margin-top: 5px;
+  width: 20px;
+  height: 20px;
+}
+
+.show-anchor-preview {
+  color: #00b5ad;
+  cursor: pointer;
+}
+
+#temp-tier1 .temp-title {
+  background: none;
+}
+
+#temp-tier1 .temp-percent {
+  pointer-events: none;
+  background: none;
+}
+
+.checkedCampaign {
+  border-bottom: 1px solid #85b7d9 !important;
+}
+
+#temp-tier1 .item {
+  border-top: none;
+  border-bottom: 1px solid rgba(34, 36, 38, .15);
+}
+
+#temp-tier1 .item:hover {
+  border-bottom: 1px solid #85b7d9;
+}
+
+#form-temp-campaign {
+  text-align: left;
+}
+
+.sub-content {
+  padding: 20px 10px;
+  margin: 20px 0;
+}
+
+.sub-content .center {
+  text-align: center;
+}
+
+.sub-text {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.tier2_error {
+  color: green;
+  padding: 20px 0px;
+  font-size: 14px;
+}
+/***** End search anchors *****/
+
+/***** Begin Tier 1 Table  */
+
+.but-pos {
+  float: right;
+  margin-bottom: 10px;
+}
+
+.but-width {
+  width: -webkit-fill-available;
+}
+
+.title-weight {
+  font-weight: bold;
+}
+
+/* datatable */
+div.dataTables_wrapper div.dataTables_filter {
+  text-align: left !important;
+}
+
+#tier2_filter .form-control,
+#tier1_filter .form-control {
+  display: inline-block !important;
+  width: auto;
+}
+
+#tier2_filter .btn,
+#tier1_filter .btn {
+  margin-left: 15px;
+}
+
+#filterOptions,
+#clientOption {
+  margin-left: 15px;
+  width: 175px !important;
+  height: 34px;
+}
+
+#filterOptions {
+  display: inline-block;  
+}
+
+#campaignlists_filter input {
+  height: 33px;
+}
+
+#tier2_filter .form-control.form-control-sm,
+#tier1_filter .form-control.form-control-sm {
+  height: 33px;
+}
+
+.width-112 {
+  width: 112px !important;
+}
+
+.buttons-group {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  text-align: center !important;
+}
+
+.buttons-group div.button {
+  margin-top: 5px !important;
+}
+
+#problemLinks {
+  margin: 8px 20px;
+}
+
+#problemLinks label {
+  margin-bottom: 0;
+}
+/***** End Tier 1 Table  */
+
+/***** Begin Tier 2 Table  */
+
+.table.table-striped {
+  counter-reset: tableCount;
+}
+
+.counterCell:before {
+  content: counter(tableCount);
+  counter-increment: tableCount;
+}
+
+/***** End Tier 2 Table  */
+
+/******* robotic ********/
+.ui.text.container {
+  max-width: 900px !important;
+}
+
+.row_comanda {
+  margin-bottom: 50px;
+}
+
+.celula {
+  float: left;
+  padding-right: 10px;
+  width: 20px;
+  overflow: hidden;
+  line-height: 24px;
+}
+
+.campaign-delete {
+  float: right;
+  margin-right: 20px;
+}
+
+.campaign-publish {
+  float: right;
+}
+
+.etichete label {
+  width: 82px;
+  float: left;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 12px;
+  color: #333;
+  line-height: 20px;
+}
+
+.field_mic {
+  color: #333;
+  width: 326px;
+
+  border-color: #4ac2fd;
+  border-width: 1px;
+  border-style: solid;
+  float: left;
+}
+
+#newCampaignField input[type="text"],
+#newCampaignField textarea,
+#newCampaignField select {
+  outline: none;
+  font-size: 13px;
+  color: #333;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+
+#newCampaignField input[type="checkbox" i] {
+  background-color: initial;
+  cursor: default;
+  -webkit-appearance: checkbox;
+  box-sizing: border-box;
+  margin: 3px 3px 3px 4px;
+  padding: initial;
+  border: initial;
+}
+
+#btn_save {
+  display: inline-block;
+  cursor: pointer;
+  font-size: 13px;
+  padding: 6px 24px;
+  text-decoration: none;
+  width: 150px;
+  float: right;
+}
+
+#newCampaignField {
+  padding: 20px 40px 30px 40px;
+}
+
+/******* end robotic ********/
+
+.campaign-title label {
+  cursor: pointer;
+}
+
+.list-item:hover {
+  cursor: pointer;
+}
+
+.campaignItem {
+  padding: 10px;
+  margin: 0 -.5em 1em;
+  border: solid 1px #bbb;
+}
+
+.campaignItem.selected {
+  border: 1px solid #4ac2fd;
+}
+
+.mr-check {
+  width: 82px;
+  float: left;
+}
+
+.mr-check p {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 12px;
+  color: #333;
+  line-height: 20px;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
