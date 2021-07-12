@@ -55,7 +55,6 @@ Route::group(['middleware' => ['authenticated', 'emailVerified']], function () {
     Route::post('/change-password', 'PasswordController@changePassword')->name('user.changePassword');
     /***** End change password *****/
 
-
     /***** Begin change the profile avatar *****/
     Route::get('/change-avatar', 'AvatarController@index')->name('form.changeAvatar');
     Route::post('/change-avatar', 'AvatarController@changeAvatar')->name('do.changeAvatar');
