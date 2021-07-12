@@ -13,6 +13,7 @@
 
 Route::get('/', 'pageController@home')->name('pages.home');
 /***** Begin Authentication routes *****/
+
 Route::group(['middleware' => ['unAuthenticated']], function () {
 
     Route::get('/register', 'RegisterController@index')->name('form.register');
