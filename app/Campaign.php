@@ -31,5 +31,4 @@ class Campaign extends Model
         return $this->belongsTo('App\OhiBatchState', 'ohi_batch_state');
 
     }
-
 }
